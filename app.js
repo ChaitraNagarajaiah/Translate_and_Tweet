@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+///ASK TA HOW TO REFERENCE A JSON FILE 
     let languageIsoCodes = [{
         "English": "Afar",
         "alpha2": "aa"
