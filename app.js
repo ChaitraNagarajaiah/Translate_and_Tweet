@@ -565,3 +565,25 @@ $(document).ready(function () {
 
     }
 });
+
+
+function translate()
+    {
+        $.get("https://www.googleapis.com/language/translate/v2",
+            {
+            key:"AIzaSyCe5_WNvxTHErxHMaTg1Yi7yOEQcQHRnSg",
+            source:"en",
+            target:"hi",
+            q:"hello"
+            },
+            function(response)
+            {
+                console.log(response.data.translations[0].translatedText);
+ 
+            },"json") .fail(function(jqXHR, textStatus, errorThrown) 
+            {
+                alert( "error :"+errorThrown );
+            });
+    }
+
+translate();
