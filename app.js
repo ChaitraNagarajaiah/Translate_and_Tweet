@@ -18,7 +18,7 @@ $(document).ready(function () {
         let queryPhrase = $("#query-input").val();
         //queryPhrase = "My name is Logan";
         let sourceLang; // add this in later
-        let targetLang = $("#target-language").val();
+        let targetLang = $("select#language-iso-list>option").attr("selected", true);
         targetLang = "fr";
 
         function translate() {
@@ -33,6 +33,10 @@ $(document).ready(function () {
                 function (response) {
                     console.log(response);
                     console.log(response.data.translations[0].translatedText);
+                    
+
+
+                    $("#query-output").html(response.data.translations[0].translatedText);
     
                 }, "json").fail(function (jqXHR, textStatus, errorThrown) {
                 alert("error :" + errorThrown);
@@ -41,6 +45,9 @@ $(document).ready(function () {
 
         translate();
     });
+
+
+
 
     
 
