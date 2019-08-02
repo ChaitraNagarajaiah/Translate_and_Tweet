@@ -565,3 +565,31 @@ $(document).ready(function () {
 
     }
 });
+
+
+let queryPhrase = $("#query-input").val();
+//queryPhrase = "My name is Logan";
+let sourceLang; // add this in later
+let targetLang =  $("#target-language").val();
+//targetLang = "fr";
+
+function translate()
+    {
+        $.get("https://www.googleapis.com/language/translate/v2",
+            {
+            key:"AIzaSyCe5_WNvxTHErxHMaTg1Yi7yOEQcQHRnSg",
+            source: "en",
+            target: targetLang,
+            q: queryPhrase
+            },
+            function(response)
+            {
+                console.log(response.data.translations[0].translatedText);
+ 
+            },"json") .fail(function(jqXHR, textStatus, errorThrown) 
+            {
+                alert( "error :"+errorThrown );
+            });
+    }
+
+translate();
