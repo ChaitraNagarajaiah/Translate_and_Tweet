@@ -14,12 +14,16 @@ $(document).ready(function () {
     
 
 
-    $("#translateBtn").on("click", function () {
+    $("#translateBtn").on("click", function (event) {
+        event.preventDefault();
         let queryPhrase = $("#query-input").val();
         //queryPhrase = "My name is Logan";
         let sourceLang; // add this in later
-        let targetLang = $("select#language-iso-list>option").attr("selected", true);
-        targetLang = "fr";
+        let targetLang = $("#language-iso-list :selected").attr("iso-code");
+        console.log(targetLang);
+        //targetLang = "fr";
+        
+        translate();
 
         function translate() {
 
@@ -43,7 +47,6 @@ $(document).ready(function () {
             });
         }
 
-        translate();
     });
 
 
