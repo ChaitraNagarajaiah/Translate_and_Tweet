@@ -37,6 +37,7 @@ form {
     border: 10px solid mediumpurple;
     border-radius: 10px;
     background-color: lavender;
+
 }
 
 footer {
@@ -50,7 +51,7 @@ footer {
     justify-content: center;
     text-align: center;
     align-content: center;
-    
+
 }
 
 .login {
@@ -59,5 +60,4 @@ footer {
 
 .translation-app {
     margin: 10px;
-    margin-right: 100px;
 }
