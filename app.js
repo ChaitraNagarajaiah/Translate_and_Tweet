@@ -41,19 +41,24 @@ $(document).ready(function () {
 
 
                     $("#query-output").html(response.data.translations[0].translatedText);
+                    let baseURL="https://twitter.com/intent/tweet?";
+                    let message = $("#query-output").html();
+                    let href = baseURL + "text=" + message;
+                    $("#twitter-button").attr("href", href);
+
     
                 }, "json").fail(function (jqXHR, textStatus, errorThrown) {
                 alert("error :" + errorThrown);
             });
         }
-
+    
     });
 
-
+  
+   
 
 
     
-
 
 
 
