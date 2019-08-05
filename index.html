@@ -10,30 +10,28 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
   <header>
-
-    <h1>Purple Group</h1>
+    <h1>the purple group</h1>
   </header>
 
   <div class="container">
     <form>
       <a href="index.html"></a>
-      <div class="form-group">
+      <div class="form-group login">
         <label for="uname">Username</label>
-        <input type="text" class="form-control" id="uname" placeholder="Enter Username">
+        <input type="text" class="textarea" id="uname" placeholder="Enter Username" rows="1">
       </div>
-      <div class="form-group">
+      <div class="form-group login">
         <label for="pwd">Password</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Password">
+        <input type="password" class="textarea" id="pwd" placeholder="Password" rows="1">
       </div>
       <button type="submit" class="button is-info">Submit</button>
       <label>
@@ -41,27 +39,35 @@
       </label>
     </form>
 
+    <form>
+      <textarea id="query-input" class="textarea translation-app" placeholder="Your Message" rows="5"></textarea>
+      <div class="select translation-app">
+        <select id="language-iso-list">
+          <option>Target Language</option>
+        </select>
+      </div>
+      <button class="translation-app" id="translateBtn">Translate</button>
+      <textarea id="query-output" class="textarea translation-app" placeholder="Your Translated Message" rows="5"></textarea>
+    </form>
 
-    <textarea id="query-input" class="textarea" placeholder="5 lines of textarea" rows="5" cols="8">Hello</textarea>
-
-    <div class="select">
-      <select id="language-iso-list">
-        <option>Target Language</option>
-      </select>
-    </div>
-    <button class="button is-info" id="translateBtn">Translate</button>
-    <textarea id="query-output" class="textarea" placeholder="5 lines of textarea" rows="5" cols="8">Hello</textarea>
-    <button class="button is-info" id="tweetBtn">Tweet</button>
-
-    
 
 
   </div>
 
-  <footer></footer>
+  <footer>
+    <p>Links to our portfolios:</p>
+    <a href="#"></a>
+    <p>Powered by: <a style="color: white" href="https://cloud.google.com/translate/#overview"><b>Google Translate</b></a> and <a style="color: white" git
+        href="https://developer.twitter.com/en/docs.html"><b>Twitter</b></a></p>
+  </footer>
+
+
+
+
+
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-    <script src="./iso-codes.js"></script>
+  <script src="./iso-codes.js"></script>
   <script src="./app.js"></script>
 </body>
 

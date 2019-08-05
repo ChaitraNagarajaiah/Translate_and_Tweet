@@ -1,36 +1,63 @@
 header {
-    color:purple;
-   text-align: center;
-   background: mediumpurple;
-   padding-top: 40px;
-   padding-bottom: 40px;
+    color: white;
+    text-align: center;
+    background: mediumpurple;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    font-family: "Baloo";
+
+    border: 10px solid mediumpurple;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 50px;
 }
 
 
 form {
-
+    align-content: center;
+    flex-direction: column;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
     box-sizing: border-box;
-    background-color: bisque;
+    background-color: lavender;
 
-} 
+}
 
 .container {
-    padding-top: 100px;
-    
+
     padding-top: 50px;
     padding-bottom: 50px;
 
     box-sizing: border-box;
-    border: 5px solid purple;
-    background-color: bisque;
+    border: 10px solid mediumpurple;
+    border-radius: 10px;
+    background-color: lavender;
+
 }
 
 footer {
+    color: white;
     background: mediumpurple;
-   height:30px;
-   padding-top: 50px;
-   margin-top:100px;
+    margin-top: 100px;
+    border: 10px solid mediumpurple;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
 }
 
+.login {
+    margin: 10px;
+}
+
+.translation-app {
+    margin: 10px;
+}
