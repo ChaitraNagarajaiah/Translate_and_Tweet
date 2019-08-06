@@ -5,13 +5,13 @@ $(document).ready(function () {
         let list = $("#language-iso-list");
         let option = $("<option>");
         option.attr("iso-code", languageIsoCodes[i].alpha2);
-      //  console.log(languageIsoCodes[i].alpha2);
+        //  console.log(languageIsoCodes[i].alpha2);
         option.text(languageIsoCodes[i].English);
         list.append(option);
 
     }
 
-    
+
 
 
     $("#translateBtn").on("click", function (event) {
@@ -22,48 +22,52 @@ $(document).ready(function () {
         let targetLang = $("#language-iso-list :selected").attr("iso-code");
         console.log(targetLang);
         //targetLang = "fr";
-        
+
         translate();
 
         function translate() {
 
 
             $.get("https://www.googleapis.com/language/translate/v2", {
-                    key: "AIzaSyCe5_WNvxTHErxHMaTg1Yi7yOEQcQHRnSg",
-                    source: "en",
-                    target: targetLang,
-                    q: queryPhrase
-                },
+                key: "AIzaSyCe5_WNvxTHErxHMaTg1Yi7yOEQcQHRnSg",
+                source: "en",
+                target: targetLang,
+                q: queryPhrase
+            },
                 function (response) {
                     console.log(response);
                     console.log(response.data.translations[0].translatedText);
-                    
+
 
 
                     $("#query-output").html(response.data.translations[0].translatedText);
+<<<<<<< HEAD
+                    let baseURL = "https://twitter.com/intent/tweet?";
+=======
 
 
                   
 
                     let baseURL="https://twitter.com/intent/tweet?";
+>>>>>>> b1a7dc710210d395024b61b33b08572c5959bbf4
                     let message = $("#query-output").html();
                     localStorage.setItem("message", message);
                     sessionStorage.setItem("message", message);
                     let href = baseURL + "text=" + message;
                     $("#twitter-button").attr("href", href);
 
-    
+
                 }, "json").fail(function (jqXHR, textStatus, errorThrown) {
-                alert("error :" + errorThrown);
-            });
+                    alert("error :" + errorThrown);
+                });
         }
-    
+
     });
 
-  
-   $("#twitter-button").on("click", function(){
-       let message = $("#query-output").text();
-       let box = `<div class="box">
+
+    $("#twitter-button").on("click", function () {
+        let message = $("#query-output").text();
+        let box = `<div class="box">
        <article class="media">
          <div class="media-left">
            <figure class="image is-64x64">
@@ -99,15 +103,15 @@ $(document).ready(function () {
            </nav>
          </div>
        </article>
-       </div> `; 
-       $("#feed").prepend(box);
+       </div> `;
+        $("#feed").prepend(box);
 
 
-   })
+    })
 
 
 
-    
+
 
 
 
