@@ -28,6 +28,10 @@ form {
 
 }
 
+textarea {
+    box-sizing: border-box;
+}
+
 .container {
 
     padding-top: 50px;
@@ -59,13 +63,10 @@ footer {
 }
 
 .translation-app {
-    margin: 10px;
+    margin: 10px 0px;
 }
 @media only screen and (max-width: 400px) {
     h1 {
      font-size: 30px;
-    }
-    .translation-app{
-        margin:10px 0px;
     }
   }
