@@ -27,6 +27,13 @@
 * Get translated response from Google 
 * Take new message and post a status (tweet) to your twitter  
 
+### Purpose for Designing the Application
+* General twitter statistics: (https://blog.hootsuite.com/twitter-statistics/)
+    * 500 million tweets are sent each day
+    * 326 million people use Twitter every month
+    * 80% of Twitter's users are not American
+    * 24% of U.S. adults use Twitter
+
 ### Roadblocks we encountered
 * When we initially chose our APIs we did not know exactly how hard using the twitter API would be...
 * Google Cloud Platform was fairly straightforward to use. In order to use Google's numerous APIs, all you have to do is sign up for a FREE trial on their Google Cloud Platform and get an API key.
@@ -47,7 +54,7 @@
         * Requiring frontend solutions!
         * Thank you so much to our instructors for all of your help with obtaining authorization for this application
 
-### Bulma Implementation
+### Bulma Implementation  
 #### Features Used: 
 * Box
 * Card
@@ -60,3 +67,4 @@
 ### Our Icebox (Ideas we hope to implement in the future):
 * Convert hashtags without having to modify them later in the textarea element
 * Add a backend xD
+* Add a display for phonetic pronunciation
