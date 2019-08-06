@@ -1,7 +1,6 @@
 var myToken = window.location.search;
-var params;
-var accessToken;
-const rawCallback = "https://lrminer.github.io/Team-Purple-Project-1/";
+
+const rawCallback = "https://lrminer.github.io/Team-Purple-Project-1/index2.html";
 
 const requestToken = function requestToken() {
 
@@ -47,67 +46,62 @@ const tokenExists = function tokenEx() {
         oauthToken: params.get("oauth_token")
     });
 
-    $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/" + baseUrl,
-        method: method,
-        headers: headers
-    }).then(function (response) {
-        params = new URLSearchParams(window.location.search);
-        console.log("status update function");
-        console.log(response);
-        accessToken=$("response.oauth_token");
-        console.log(accessToken);
-    });
-        //status update
-        // const statusUpdate= function statusUpdate() {
-        
-
-        //var params = new URLSearchParams(window.location.search);
-
-
-
-
-        
+    // $.ajax({
+    //     url: "https://cors-anywhere.herokuapp.com/" + baseUrl,
+    //     method: method,
+    //     headers: headers
+    // });
+    // .then(function (response) {
+    //     const params = new URLSearchParams(response);
+    //     console.log("status update function");
+    //     console.log(response);
+    //     const accessToken = params.get("oauth_token");
+    //     const tokenSecret = params.get("oauth_token_secret");
+    //     sessionStorage.setItem("accessToken", accessToken);
+    //     sessionStorage.setItem("tokenSecret", tokenSecret);
+    // });
+    //status update
+    // const statusUpdate= function statusUpdate() {
 };
-const statusUpdate = function statusUpdate() {
-    //var params = new URLSearchParams(window.location.search);
-    console.log("existsagain");
-    console.log(params);
-    const baseUrl = "https://api.twitter.com/1.1/statuses/update.json?status=helloworld!";
-    const method = "POST";
-    const accessToken= params.get("oauth_token");
-    console.log(accessToken);
-    const headers = genAuthHeaders({
-        reqMethod: method,
-        baseUrl: baseUrl,
-        consumerKey: "JOSoBvyeu0sEhLjswFygUQVze",
-        //consumerSecret: "z0279qvCL5UV7XNEYSsaa2oZiQ6x9vFrjAmKPa77tp4IRoGkH0",
-        oauthToken: accessToken
 
-    })
-    console.log("posted update");
+    //var params = new URLSearchParams(window.location.search);        
 
-    $.ajax({
-        url: "https://cors-anywhere.herokuapp.com/" + baseUrl,
-        method: method,
-        headers: headers
-    }).then(function (response) {
-        var params = new URLSearchParams(window.location.search);
-        console.log(response);
-        accessToken=response.oauth_token;
-        console.log("status update function");
+    // const statusUpdate = function statusUpdate() {
+    //     //var params = new URLSearchParams(window.location.search);
+    //     const baseUrl = "https://api.twitter.com/1.1/statuses/update.json";
+    //     const method = "POST";
 
-    })
-}
+    //     const headers = genAuthHeaders({
+    //         reqMethod: method,
+    //         baseUrl: baseUrl,
+    //         consumerKey: "JOSoBvyeu0sEhLjswFygUQVze",
+    //         consumerSecret: "z0279qvCL5UV7XNEYSsaa2oZiQ6x9vFrjAmKPa77tp4IRoGkH0",
+    //         oauthToken: sessionStorage.getItem("accessToken"),
+    //         tokenSecret: sessionStorage.getItem("tokenSecret"),
+    //         status: "Hello world!"
+    //     })
 
-$(document).ready(function(){
-    $("#myBtn").click(function(){
-      statusUpdate();
-    });
-  });
 
-    if (window.location.search) {
-        tokenExists();
-    }else {
-        requestToken();
-    }
+    //     $.ajax({
+    //         url: "https://cors-anywhere.herokuapp.com/" + baseUrl,
+    //         method: method,
+    //         headers: headers,
+    //         data: {
+    //             status: "Hello world!"
+    //         }
+    //     }).then(function (response) {
+    //         console.log("status update function");
+    //     })
+    // }
+
+    // $(document).ready(function () {
+    //     $("#myBtn").click(function () {
+    //         statusUpdate();
+    //     });
+
+
+if (window.location.search.match("oauth_verifier") && !sessionStorage.getItem("accessToken")) {
+    tokenExists();
+} else if (!sessionStorage.getItem("accessToken")) {
+    requestToken();
+};
