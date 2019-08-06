@@ -61,3 +61,11 @@ footer {
 .translation-app {
     margin: 10px;
 }
+@media only screen and (max-width: 400px) {
+    h1 {
+     font-size: 30px;
+    }
+    .translation-app{
+        margin:10px 0px;
+    }
+  }
