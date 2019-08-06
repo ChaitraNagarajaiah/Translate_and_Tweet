@@ -41,8 +41,14 @@ $(document).ready(function () {
 
 
                     $("#query-output").html(response.data.translations[0].translatedText);
+
+
+                  
+
                     let baseURL="https://twitter.com/intent/tweet?";
                     let message = $("#query-output").html();
+                    localStorage.setItem("message", message);
+                    sessionStorage.setItem("message", message);
                     let href = baseURL + "text=" + message;
                     $("#twitter-button").attr("href", href);
 
