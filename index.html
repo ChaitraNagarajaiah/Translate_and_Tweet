@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Team Purple</title>
+  <title>Translate Before You Tweet!</title>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 
@@ -23,34 +23,24 @@
   </header>
 
   <div class="container">
-    <!--
-      <form>
-      
-      <div class="form-group login">
-        <label for="uname">Username</label>
-        <input type="text" class="textarea" id="uname" placeholder="Enter Username" rows="1">
-      </div>
-      <div class="form-group login">
-        <label for="pwd">Password</label>
-        <input type="password" class="textarea" id="pwd" placeholder="Password" rows="1">
-      </div>
-      <button>Submit</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </form>
--->
+  
     <form>
+      
       <textarea id="query-input" class="textarea translation-app" placeholder="Your Message" rows="5"></textarea>
+      
       <div class="select translation-app">
         <select id="language-iso-list">
           <option>Target Language</option>
         </select>
       </div>
+
       <button id="translateBtn" class="button translation-app">Translate</button>
+     
       <textarea id="query-output" class="textarea translation-app" placeholder="Your Translated Message"
         rows="5"></textarea>
+
       <a id="twitter-button" class="button is-info is-rounded translation-app" target="_blank" href="">Tweet</a>
+    
     </form>
 
     <div id="feed">
@@ -59,10 +49,15 @@
   </div>
 
   <footer>
-    <p>Links to our portfolios:</p>
+    <p>Find us on GitHub:</p>
+    <a class="portfolio-link" href="https://github.com/lrminer/translate-tweet-app">Our Repo</a>
+    <a class="portfolio-link" href="https://github.com/AijahChappell">Aijah Chappell</a>
+    <a class="portfolio-link" href="https://github.com/ChaitraNagarajaiah">Chaitra Nagarajaiah</a>
+    <a class="portfolio-link" href="https://github.com/balwinder24">Balwinder Singh</a>
+    <a class="portfolio-link" href="https://github.com/lrminer">Logan Miner</a>
     <p>Powered by: <a style="color: white" href="https://cloud.google.com/translate/#overview"><b>Google
-          Translate</b></a> and <a style="color: white"
-        href="https://developer.twitter.com/en/docs.html"><b>Twitter</b></a></p>
+          Cloud Translate</b></a> and <a style="color: white"
+        href="https://developer.twitter.com/en/docs.html"><b>Twitter</b></a> APIs</p>
   </footer>
 
 
