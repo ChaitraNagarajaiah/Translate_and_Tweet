@@ -1,3 +1,11 @@
+# Contributors
+* Aijah Chappell (https://github.com/AijahChappell)
+* Chaitra Nagarajaiah (https://github.com/ChaitraNagarajaiah)
+* Balwinder Singh (https://github.com/balwinder24)
+* Logan Miner (https://github.com/lrminer)
+
+
+
 # Project 1
 ## Project Outline
 ### Objectives
