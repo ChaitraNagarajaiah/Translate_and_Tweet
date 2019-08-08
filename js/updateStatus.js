@@ -1,6 +1,6 @@
 var myToken = window.location.search;
 
-const rawCallback = "https://lrminer.github.io/Team-Purple-Project-1";
+const rawCallback = "https://lrminer.github.io/translate-tweet-app";
 
 const requestToken = function requestToken() {
 
