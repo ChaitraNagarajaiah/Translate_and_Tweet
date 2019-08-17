@@ -18,20 +18,20 @@ console.log(client);
 
 //POST statuses/update
 
-client.post('statuses/update', {
-    status: 'I Love Twitter'
-}, function (error, tweet, response) {
-    if (error) console.log(error);
-    console.log(tweet); // Tweet body.
-    // console.log(response); // Raw response object.
-});
-
 // client.post('statuses/update', {
-//         status: 'I Love Twitter'
-//     })
-//     .then(function (tweet) {
-//         console.log(tweet);
-//     })
-//     .catch(function (error) {
-//         throw error;
-//     })
+//     status: 'I Love Twitter'
+// }, function (error, tweet, response) {
+//     if (error) console.log(error);
+//     console.log(tweet); // Tweet body.
+//     console.log(response); // Raw response object.
+// });
+
+client.post('statuses/update', {
+        status: 'Node is awesome'
+    })
+    .then(function (tweet) {
+        console.log(tweet);
+    })
+    .catch(function (error) {
+        throw error;
+    });
