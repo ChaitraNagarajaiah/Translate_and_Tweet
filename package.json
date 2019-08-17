@@ -1,0 +1,23 @@
+{
+  "name": "team-purple-project-1",
+  "version": "1.0.0",
+  "description": "* Aijah Chappell (https://github.com/AijahChappell) * Chaitra Nagarajaiah (https://github.com/ChaitraNagarajaiah) * Balwinder Singh (https://github.com/balwinder24) * Logan Miner (https://github.com/lrminer)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrminer/Team-Purple-Project-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrminer/Team-Purple-Project-1/issues"
+  },
+  "homepage": "https://github.com/lrminer/Team-Purple-Project-1#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "twitter": "^1.7.1"
+  }
+}
