@@ -4,13 +4,17 @@ const Twitter = require('twitter');
 const keys = require('./keys');
 
 
-// var client = new Twitter({
-//     consumer_key: process.env.TWITTER_CONSUMER_KEY,
-//     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-//     access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-//     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
-// });
 
+
+command = process.argv[2];
+
+
+if (command === "tweet") {
+    status = "";
+    for (let i = 3; i < process.argv.length; i++) {
+        status += process.argv[i] + " ";
+    }
+}
 
 var client = new Twitter(keys.twitter);
 
@@ -27,7 +31,7 @@ console.log(client);
 // });
 
 client.post('statuses/update', {
-        status: 'Node is awesome'
+        status: status
     })
     .then(function (tweet) {
         console.log(tweet);
