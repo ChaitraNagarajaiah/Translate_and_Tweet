@@ -6,8 +6,9 @@ $('#submit-to-google').on('click', function (e) {
     e.preventDefault();
 
     const message = $("#send-this-to-google").val();
-    const language = $('#languages :selected').val();
-    sendDataToGoogle(message, language);
+    const sourceLanguage = $('#source-language :selected').val();
+    const targetLanguage = $('#target-language :selected').val();
+    sendDataToGoogle(message, sourceLanguage, targetLanguage);
 });
 
 // twitter button
@@ -27,28 +28,18 @@ function sendTweetToServer(data) {
 }
 
 function createLanguageList() {
-    const select = $('#languages');
+    const select = $('.languages');
     for (let i = 0; i < languages.length; i++) {
-        const option = $('<option>').attr('value', languages[i].alpha2).text(languages[i].English);
+        const option = $('<option>').addClass('dropdown-item').attr('value', languages[i].alpha2).text(languages[i].English);
         select.append(option);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-function sendDataToGoogle(message, language) {
+function sendDataToGoogle(message, source, target) {
     $.get("https://www.googleapis.com/language/translate/v2", {
         key: "AIzaSyCe5_WNvxTHErxHMaTg1Yi7yOEQcQHRnSg",
-        source: "en",
-        target: language,
+        source: source,
+        target: target,
         q: message
     }).then(function (data) {
         console.log(data);

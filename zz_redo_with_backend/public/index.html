@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
 
     <div class="container">
         <div class="row">
@@ -29,13 +28,18 @@
                 <!-- GOOGLE TRANSLATE -->
                 <form action="https://www.googleapis.com/language/translate/v2" method="get">
                     <input class="input-custom" type="text" id="send-this-to-google" value="Hello World">
-                    <select id="languages"></select>
+                    <select class="languages" id="source-language">
+                        <option value="en">Source Language</option>
+                    </select>
+                    <select class="languages" id="target-language">
+                        <option value="">Target Language</option>
+                    </select>
                     <input type="button" value="Submit" id="submit-to-google">
-                    <input class="input-custom" type="text" id="send-this-to-twitter" value="Wolrd Hello">
+                    <input class="input-custom" type="text" id="send-this-to-twitter" value="World Hello">
                     <input type="button" value="Submit" id="submit-to-twitter">
                 </form>
-            </div>  
-        </div>        
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <!-- TWITTER -->
