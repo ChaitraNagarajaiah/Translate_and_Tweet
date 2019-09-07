@@ -23,7 +23,7 @@ function postTweet(tweet) {
     }, function (error, tweetInfo, response) {
         if (!error) {
             console.log(tweetInfo);
-            return tweetInfo;
+            // return tweetInfo;
         }
     });
 }

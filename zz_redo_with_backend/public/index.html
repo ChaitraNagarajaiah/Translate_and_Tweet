@@ -16,39 +16,53 @@
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row" id="row-header">
             <div class="col">
-                <!-- HEADER -->
+
+                <nav class="navbar navbar-dark" id="header">
+                    <span class="navbar-brand mb-0 h1">Translate-a-tweet</span>
+                </nav>
 
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="row-app">
             <div class="col">
-                <!-- GOOGLE TRANSLATE -->
-                <form action="https://www.googleapis.com/language/translate/v2" method="get">
-                    <input class="input-custom" type="text" id="send-this-to-google" value="Hello World">
-                    <select class="languages" id="source-language">
-                        <option value="en">Source Language</option>
-                    </select>
-                    <select class="languages" id="target-language">
-                        <option value="">Target Language</option>
-                    </select>
-                    <input type="button" value="Submit" id="submit-to-google">
-                    <input class="input-custom" type="text" id="send-this-to-twitter" value="World Hello">
-                    <input type="button" value="Submit" id="submit-to-twitter">
-                </form>
+
+                <!-- Application -->
+                <div id="application">
+                    <form class="d-flex flex-column shadow-lg bg-lavendar"
+                        action="https://www.googleapis.com/language/translate/v2" method="get">
+                        <input class="input-custom d-block" type="text" id="send-this-to-google" value="" placeholder="Put your message here">
+                        <select class="languages d-block" id="source-language">
+                            <option value="en">Source Language</option>
+                        </select>
+                        <select class="languages d-block" id="target-language">
+                            <option value="">Target Language</option>
+                        </select>
+                        <input class="d-block btn btn-primary" type="button" value="Translate" id="submit-to-google">
+                        <input class="input-custom d-block" type="text" id="send-this-to-twitter" value="" placeholder="Translated message appears here" readonly>
+                        <input class="d-block btn btn-primary" type="button" value="Tweet" id="submit-to-twitter">
+                    </form>
+                </div>
+
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <!-- TWITTER -->
-            </div>
-        </div>
-        <div class="row">
+
+        <div class="row" id="row-footer">
             <div class="col">
                 <!-- FOOTER -->
-
+                <div id="footer">
+                    <p>Find us on GitHub:</p>
+                    <a class="portfolio-link" href="https://github.com/lrminer/translate-tweet-app">Our Repo</a>
+                    <a class="portfolio-link" href="https://github.com/AijahChappell">Aijah Chappell</a>
+                    <a class="portfolio-link" href="https://github.com/ChaitraNagarajaiah">Chaitra Nagarajaiah</a>
+                    <a class="portfolio-link" href="https://github.com/balwinder24">Balwinder Singh</a>
+                    <a class="portfolio-link" href="https://github.com/lrminer">Logan Miner</a>
+                    <p>Powered by: <a style="color: white" href="https://cloud.google.com/translate/#overview"><b>Google
+                                Cloud Translate</b></a> and <a style="color: white"
+                            href="https://developer.twitter.com/en/docs.html"><b>Twitter</b></a> APIs</p>
+                </div>
             </div>
         </div>
     </div>

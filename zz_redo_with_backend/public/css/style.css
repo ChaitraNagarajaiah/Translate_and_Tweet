@@ -1,4 +1,39 @@
 .input-custom {
     height: 200px;
-    width: 600px;
+
+}
+
+input, select {
+    margin: 10px 0px;
+}
+
+#header,
+#footer {
+    
+    width: auto;
+    color: white;
+    background: mediumpurple;
+    border: 10px solid mediumpurple;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+#application {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    border: 10px solid mediumpurple;
+    border-radius: 10px;
+}
+
+
+
+
+
+.portfolio-link {
+    color: white;
 }
