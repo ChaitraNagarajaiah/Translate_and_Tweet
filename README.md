@@ -1,4 +1,4 @@
-(https://cryptic-island-17961.herokuapp.com/)
+https://translate-a-tweet.herokuapp.com/
 
 # Contributors
 * Aijah Chappell (https://github.com/AijahChappell)
