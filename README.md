@@ -78,3 +78,5 @@ https://translate-a-tweet.herokuapp.com/
 * Convert hashtags without having to modify them later in the textarea element
 * Add a backend xD
 * Add a display for phonetic pronunciation
+
+![image](https://user-images.githubusercontent.com/50887666/67871402-abab0c00-fb06-11e9-968c-4a54e80cf721.png)
